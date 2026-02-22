@@ -22,5 +22,11 @@ describe('SubGenerator angular of yellowbricks-angular-relativepathresource JHip
     it('should succeed', () => {
       expect(result.getStateSnapshot()).toMatchSnapshot();
     });
+
+    it('should use relative logo path in navbar.scss', () => {
+      const content = result._readFile('src/main/webapp/app/layouts/navbar/navbar.scss');
+      expect(content).toContain("url('content/images/logo-jhipster.png')");
+      expect(content).not.toContain("url('/content/images/logo-jhipster.png')");
+    });
   });
 });
