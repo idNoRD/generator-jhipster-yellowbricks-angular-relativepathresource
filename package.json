@@ -1,6 +1,6 @@
 {
   "name": "generator-jhipster-yellowbricks-angular-relativepathresource",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "JHipster blueprint to make the Angular navbar logo path relative (removes leading slash)",
   "keywords": [
     "yeoman-generator",
