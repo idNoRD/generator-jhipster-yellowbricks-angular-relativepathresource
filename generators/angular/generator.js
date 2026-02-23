@@ -88,15 +88,15 @@ export default class extends BaseApplicationGenerator {
         this.editFile('src/main/webapp/app/layouts/navbar/navbar.scss', { ignoreNonExisting: true }, content => {
           if (!content.includes("url('/content/images/logo-jhipster.png')")) {
             if (content.includes("url('content/images/logo-jhipster.png')")) {
-              this.log.info('[relative-path blueprint] navbar.scss: logo path already relative, skipping');
+              this.log.info('[yellowbricks-angular-relativepathresource] navbar.scss: logo path already relative, skipping');
             } else {
-              this.log.warn('[relative-path blueprint] navbar.scss: expected logo URL not found — manual intervention needed');
+              this.log.warn('[yellowbricks-angular-relativepathresource] navbar.scss: expected logo URL not found — manual intervention needed');
             }
             return content;
           }
 
           const updated = content.replace("url('/content/images/logo-jhipster.png')", "url('content/images/logo-jhipster.png')");
-          this.log.info('[relative-path blueprint] navbar.scss: logo path made relative successfully');
+          this.log.info('[yellowbricks-angular-relativepathresource] navbar.scss: logo path made relative successfully');
           return updated;
         });
       },
